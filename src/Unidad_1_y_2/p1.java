@@ -9,7 +9,6 @@ public class p1 extends JApplet{
     public void paint(Graphics g){
         Graphics2D g2 = (Graphics2D) g;
         g2.setPaint(Color.red);
-
         g2.draw(new Line2D.Double(0,0,100,100));
     }
 }
