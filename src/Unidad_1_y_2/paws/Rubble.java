@@ -89,5 +89,10 @@ public class Rubble extends JApplet{
         //
         Graphics2D g20 = (Graphics2D) g;
         g20.draw(new Line2D.Double(276,122,281,122));
+        //oreja
+        QuadCurve2D o1 = new QuadCurve2D.Double();
+        o1.setCurve(278,83,282,92,281,122);
+        Graphics2D g21 = (Graphics2D) g;
+        g21.draw(o1);
     }
 }
