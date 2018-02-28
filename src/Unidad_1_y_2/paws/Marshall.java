@@ -167,8 +167,50 @@ public class Marshall extends JApplet{
         cejad.addPoint(157,138);
         cejad.addPoint(161,138);
         ceja2.fillPolygon(cejad);
-        //casco
+        //vicera
         Graphics2D casco = (Graphics2D) g;
+        Polygon vicera = new Polygon();
+        casco.setColor(Color.red);
+        vicera.addPoint(146,145);
+        vicera.addPoint(136,145);
+        vicera.addPoint(135,145);
+        vicera.addPoint(126,145);
+        vicera.addPoint(123,144);
+        vicera.addPoint(122,142);
+        vicera.addPoint(120,140);
+        vicera.addPoint(117,138);
+        vicera.addPoint(117,130);
+        vicera.addPoint(118,128);
+        vicera.addPoint(121,125);
+        vicera.addPoint(123,124);
+        vicera.addPoint(126,122);
+        vicera.addPoint(128,121);
+        vicera.addPoint(132,120);
+        vicera.addPoint(138,117);
+        vicera.addPoint(143,116);
+        vicera.addPoint(149,114);
+        vicera.addPoint(152,113);
+        vicera.addPoint(152,107);
+        vicera.addPoint(207,96);
+        vicera.addPoint(272,107);
+        vicera.addPoint(278,109);
+        vicera.addPoint(284,112);
+        vicera.addPoint(289,112);
+        vicera.addPoint(297,119);
+        vicera.addPoint(299,122);
+        vicera.addPoint(298,128);
+        vicera.addPoint(299,132);
+        vicera.addPoint(294,134);
+        vicera.addPoint(289,139);
+        vicera.addPoint(273,122);
+        vicera.addPoint(256,119);
+        vicera.addPoint(211,119);
+        vicera.addPoint(176,124);
+        vicera.addPoint(154,127);
+        vicera.addPoint(147,144);
+        casco.fillPolygon(vicera);
+        //casco
+        ceja2.setColor(Color.black);
         QuadCurve2D c2 = new QuadCurve2D.Double();
         casco.setStroke(new BasicStroke(1.5f,BasicStroke.JOIN_ROUND, BasicStroke.CAP_ROUND, 1.5f));
         c2.setCurve(146,130,213,116,275,120);
@@ -508,30 +550,6 @@ public class Marshall extends JApplet{
         rojoChaleco.addPoint(258,271);
         rojoChaleco.addPoint(251,269);
         rojoChaleco.addPoint(243,262);
-        /**rojoChaleco.addPoint(241,264);
-        rojoChaleco.addPoint(234,268);
-        rojoChaleco.addPoint(228,270);
-        rojoChaleco.addPoint(223,272);
-        rojoChaleco.addPoint(222,274);
-        rojoChaleco.addPoint(212,274);
-        rojoChaleco.addPoint(212,277);
-        rojoChaleco.addPoint(216,280);
-        rojoChaleco.addPoint(217,287);
-        rojoChaleco.addPoint(216,292);
-        rojoChaleco.addPoint(213,296);
-        rojoChaleco.addPoint(212,301);**/
-        /**
-        rojoChaleco.addPoint(209,305);
-        rojoChaleco.addPoint(206,309);
-        rojoChaleco.addPoint(195,309);
-        rojoChaleco.addPoint(191,305);
-        rojoChaleco.addPoint(188,301);
-        rojoChaleco.addPoint(187,297);
-        rojoChaleco.addPoint(186,292);
-        rojoChaleco.addPoint(186,281);
-        rojoChaleco.addPoint(188,278);
-        rojoChaleco.addPoint(189,274);
-        rojoChaleco.addPoint(190,273);**/
         rojoChaleco.addPoint(191,270);
         cuerpo.fillPolygon(rojoChaleco);
         cuerpo.setColor(Color.black);
@@ -592,7 +610,7 @@ public class Marshall extends JApplet{
         QuadCurve2D c316 = new QuadCurve2D.Double();
         c316.setCurve(282,296,274,322,261,298);
         cuerpo.draw(c316);
-        //mocila
+        //mochila
         Graphics2D mochila = (Graphics2D) g;
         mochila.setColor(Color.red);
         Polygon extintor = new Polygon();
@@ -687,10 +705,157 @@ public class Marshall extends JApplet{
         QuadCurve2D m9 = new QuadCurve2D.Double();
         m9.setCurve(266,243,263,235,249,234);
         mochila.draw(m9);
+        //manguera gris
+        mochila.draw(new Line2D.Double(250,250,265,250));
+        mochila.draw(new Line2D.Double(250,261,260,262));
+        QuadCurve2D m10 = new QuadCurve2D.Double();
+        m10.setCurve(249,261,247,256,250,251);
+        mochila.draw(m10);
+        QuadCurve2D m11 = new QuadCurve2D.Double();
+        m11.setCurve(269,252,272,257,268,265);
+        mochila.draw(m11);
+        Polygon gris = new Polygon();
+        mochila.setColor(Color.lightGray);
+        gris.addPoint(267,265);
+        gris.addPoint(269,265);
+        gris.addPoint(270,260);
+        gris.addPoint(270,254);
+        gris.addPoint(269,253);
+        gris.addPoint(264,250);
+        gris.addPoint(250,250);
+        gris.addPoint(249,253);
+        gris.addPoint(249,259);
+        gris.addPoint(250,261);
+        gris.addPoint(260,261);
+        gris.addPoint(260,263);
+        gris.addPoint(266,263);
+        gris.addPoint(266,265);
+        mochila.fillPolygon(gris);
         //patas
         cuerpo.setStroke(new BasicStroke(2f));
         cuerpo.setColor(Color.black);
         cuerpo.draw(new Line2D.Double(253,328,254,359));
+        cuerpo.draw(new Line2D.Double(254,359,261,419));
+        QuadCurve2D c41 = new QuadCurve2D.Double();
+        c41.setCurve(220,353,224,356,225,370);
+        cuerpo.draw(c41);
+        cuerpo.draw(new Line2D.Double(225,370,225,423));
+        QuadCurve2D c42 = new QuadCurve2D.Double();
+        c42.setCurve(225,423,210,454,226,474);
+        cuerpo.draw(c42);
+        cuerpo.draw(new Line2D.Double(226,474,234,474));
+        QuadCurve2D c43 = new QuadCurve2D.Double();
+        c43.setCurve(236,429,230,447,236,474);
+        cuerpo.draw(c43);
+        QuadCurve2D c44 = new QuadCurve2D.Double();
+        c44.setCurve(254,427,259,450,256,471);
+        cuerpo.draw(c44);
+        QuadCurve2D c45 = new QuadCurve2D.Double();
+        c45.setCurve(256,471,245,478,236,471);
+        cuerpo.draw(c45);
+        QuadCurve2D c46 = new QuadCurve2D.Double();
+        c46.setCurve(257,471,267,475,272,465);
+        cuerpo.draw(c46);
+        cuerpo.draw(new Line2D.Double(272,465,272,438));
+        QuadCurve2D c47 = new QuadCurve2D.Double();
+        c47.setCurve(272,438,269,426,260,419);
+        cuerpo.draw(c47);
+        QuadCurve2D c48 = new QuadCurve2D.Double();
+        c48.setCurve(230,421,243,416,257,420);
+        cuerpo.draw(c48);
+        //pata 2
+        cuerpo.draw(new Line2D.Double(212,354,210,448));
+        QuadCurve2D c49 = new QuadCurve2D.Double();
+        c49.setCurve(210,448,196,456,169,457);
+        cuerpo.draw(c49);
+        QuadCurve2D c410 = new QuadCurve2D.Double();
+        c410.setCurve(169,457,164,436,171,415);
+        cuerpo.draw(c410);
+        cuerpo.draw(new Line2D.Double(167,455,161,454));
+        QuadCurve2D c411 = new QuadCurve2D.Double();
+        c411.setCurve(161,454,157,432,168,408);
+        cuerpo.draw(c411);
+        QuadCurve2D c412 = new QuadCurve2D.Double();
+        c412.setCurve(161,411,169,404,187,411);
+        cuerpo.draw(c412);
+        QuadCurve2D c413 = new QuadCurve2D.Double();
+        c413.setCurve(161,411,148,434,159,449);
+        cuerpo.draw(c413);
+        cuerpo.draw(new Line2D.Double(184,326,180,408));
+        //pata 3
+        cuerpo.draw(new Line2D.Double(269,339,266,395));
+        QuadCurve2D c414 = new QuadCurve2D.Double();
+        c414.setCurve(273,397,264,394,258,396);
+        cuerpo.draw(c414);
+        cuerpo.draw(new Line2D.Double(289,402,288,355));
+        QuadCurve2D c415 = new QuadCurve2D.Double();
+        c415.setCurve(288,355,287,336,282,333);
+        cuerpo.draw(c415);
+        //pata 4
+        cuerpo.draw(new Line2D.Double(306,291,323,440));
+        cuerpo.draw(new Line2D.Double(323,440,300,452));
+        QuadCurve2D c416 = new QuadCurve2D.Double();
+        c416.setCurve(300,452,289,453,289,452);
+        cuerpo.draw(c416);
+        QuadCurve2D c417 = new QuadCurve2D.Double();
+        c417.setCurve(297,405,275,399,266,424);
+        cuerpo.draw(c417);
+        QuadCurve2D c418 = new QuadCurve2D.Double();
+        c418.setCurve(289,452,282,429,289,414);
+        cuerpo.draw(c418);
+        QuadCurve2D c419 = new QuadCurve2D.Double();
+        c419.setCurve(280,414,274,430,276,449);
+        cuerpo.draw(c419);
+        QuadCurve2D c420 = new QuadCurve2D.Double();
+        c420.setCurve(276,449,281,455,287,451);
+        cuerpo.draw(c420);
+        cuerpo.draw(new Line2D.Double(275,450,271,450));
+        //cola
+        QuadCurve2D c421 = new QuadCurve2D.Double();
+        c421.setCurve(306,290,315,298,318,312);
+        cuerpo.draw(c421);
+        QuadCurve2D c422 = new QuadCurve2D.Double();
+        c422.setCurve(318,312,324,324,337,333);
+        cuerpo.draw(c422);
+        QuadCurve2D c423 = new QuadCurve2D.Double();
+        c423.setCurve(337,333,340,337,337,340);
+        cuerpo.draw(c423);
+        QuadCurve2D c424 = new QuadCurve2D.Double();
+        c424.setCurve(337,340,321,337,311,323);
+        cuerpo.draw(c424);
+        //manchas de las patas
+        cuerpo.fillOval(300,395,10,10);
+        cuerpo.fillOval(305,391,6,10);
+
+        cuerpo.fillOval(294,365,10,13);
+        cuerpo.fillOval(295,375,10,13);
+        cuerpo.fillOval(303,371,8,13);
+        cuerpo.fillOval(300,361,10,17);
+
+        cuerpo.fillOval(294,334,10,10);
+        cuerpo.fillOval(300,326,10,16);
+        cuerpo.fillOval(304,339,10,10);
+
+        cuerpo.fillOval(233,354,14,24);
+        cuerpo.fillOval(228,366,25,12);
+        cuerpo.fillOval(239,370,10,10);
+
+        cuerpo.fillOval(235,393,6,10);
+        cuerpo.fillOval(237,402,6,10);
+        cuerpo.fillOval(237,398,10,10);
+        cuerpo.fillOval(242,404,10,8);
+
+        cuerpo.fillOval(182,354,12,22);
+        cuerpo.fillOval(189,348,6,15);
+        cuerpo.fillOval(190,360,6,8);
+
+        cuerpo.fillOval(188,386,8,10);
+        cuerpo.fillOval(186,394,6,12);
+        cuerpo.fillOval(183,390,10,12);
+
+        cuerpo.fillOval(315,312,4,10);
+        cuerpo.fillOval(318,317,6,12);
+        //collar
         Graphics2D collar = (Graphics2D) g;
         collar.setStroke(new BasicStroke(1.0f));
         Polygon collarAmarillo = new Polygon();
