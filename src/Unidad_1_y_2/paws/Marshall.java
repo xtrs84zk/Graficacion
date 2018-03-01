@@ -5,9 +5,11 @@ import javax.swing.*;
 import java.awt.geom.*;
 
 public class Marshall extends JApplet{
-    public Marshall(){
-        JFrame frame = new JFrame();
-        frame.setSize(500,500);
+    public void init(){
+        //initialize drawing colors
+        this.setMinimumSize(new Dimension(500, 500));
+        this.setMaximumSize(new Dimension(500, 500));
+        this.setSize(500,500);
     }
     public void paint(Graphics g) {
         //ojo izquierdo
