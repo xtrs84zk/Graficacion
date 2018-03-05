@@ -366,13 +366,42 @@ public class Everest extends JApplet{
         cara.draw(new Line2D.Double(279,183,279,178));
         //gorro
         Graphics2D gorro = (Graphics2D) g;
-        QuadCurve2D c29 = new QuadCurve2D.Double();
-        c29.setCurve(284,179,276,174,271,171);
-        gorro.draw(c29);
-        QuadCurve2D c30 = new QuadCurve2D.Double();
-        c30.setCurve(284,189,289,184,292,179);
-        gorro.draw(c30);
+        QuadCurve2D g1 = new QuadCurve2D.Double();
+        g1.setCurve(284,179,276,174,271,171);
+        gorro.draw(g1);
+        QuadCurve2D g2 = new QuadCurve2D.Double();
+        g2.setCurve(284,189,289,184,292,179);
+        gorro.draw(g2);
         gorro.draw(new Line2D.Double(293,177,293,170));
-
+        QuadCurve2D g3 = new QuadCurve2D.Double();
+        g3.setCurve(290,172,293,170,294,165);
+        gorro.draw(g3);
+        gorro.draw(new Line2D.Double(271,170,269,170));
+        gorro.draw(new Line2D.Double(268,169,268,166));
+        gorro.draw(new Line2D.Double(267,167,267,163));
+        QuadCurve2D g4 = new QuadCurve2D.Double();
+        g4.setCurve(267,163,266,161,259,155);
+        gorro.draw(g4);
+        gorro.draw(new Line2D.Double(258,154,258,151));
+        gorro.draw(new Line2D.Double(257,152,257,143));
+        gorro.draw(new Line2D.Double(257,143,254,143));
+        QuadCurve2D g5 = new QuadCurve2D.Double();
+        g5.setCurve(255,143,250,140,247,136);
+        gorro.draw(g5);
+        gorro.draw(new Line2D.Double(247,136,247,132));
+        QuadCurve2D g6 = new QuadCurve2D.Double();
+        g6.setCurve(246,131,237,128,235,117);
+        gorro.draw(g6);
+        QuadCurve2D g7 = new QuadCurve2D.Double();
+        g7.setCurve(235,117,234,115,231,113);
+        gorro.draw(g7);
+        gorro.draw(new Line2D.Double(231,113,226,113));
+        QuadCurve2D g8 = new QuadCurve2D.Double();
+        g8.setCurve(226,113,222,110,221,104);
+        gorro.draw(g8);
+        gorro.draw(new Line2D.Double(221,103,211,103));
+        QuadCurve2D g9 = new QuadCurve2D.Double();
+        g9.setCurve(211,103,206,100,203,94);
+        gorro.draw(g9);
     }
 }
