@@ -16,24 +16,6 @@ public class Marshall extends JPanel{
         this.setMaximumSize(new Dimension(500, 500));
         this.setSize(500,500);
     }
-    public void mostrar(){
-        repaint();
-    }
-
-    public void  trasladar(int x){
-        at.translate(x,0);
-    }
-    public void rotar(int x){
-        at.rotate(Math.toRadians(x),180,180);
-    }
-
-    public void escalar(double x){
-        at.scale(x,x);
-    }
-
-    public void sesgar(double x){
-        at.shear(x,0.0);
-    }
 
     public Marshall(int aa, int xIncial, int yInicial){
         altoyancho = aa;
@@ -1030,5 +1012,22 @@ public class Marshall extends JPanel{
         c21.setCurve(188,270,187,260,192,249);
         collar.draw(c21);
 
+    }
+
+    public void transformacion(String s) {
+
+            if(s ==("Trasladar")){
+                at.translate(5,0);
+            }
+        if(s.equals("Rotar")) {
+            at.rotate(Math.toRadians(5), 180, 180);
+        }
+        if(s.equals("Escalar")) {
+            at.scale(0.9, 5);
+        }
+        if(s.equals("Sesgar")) {
+            at.shear(0.5, 0.0);
+        }
+        this.repaint();
     }
 }

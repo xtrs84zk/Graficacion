@@ -8,29 +8,35 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.*;
 
-public class MarshallT extends JApplet implements ListSelectionListener {
-    JList t, r, e ,s;
-    private Marshall skye;
+public class MarshallT extends JApplet {
 
+    private Marshall skye;
+    String[] list = {"Transformar","Rotar","Escalar","Sesgar"};
+    JList l;
     public void init(){
         this.setMinimumSize(new Dimension(900, 900));
         this.setMaximumSize(new Dimension(900, 900));
         this.setSize(500,500);
         Container c = getContentPane();
-
-        String[] list = {"Escalar"};
-        e = new JList(list);
-        e.addListSelectionListener(this);
-        this.getContentPane().add(e);
-
-
-
-        c.add(e,BorderLayout.NORTH);
+        l = new JList(list);
+        c.add(l);
+        c.setVisible(true);
+        c.add(l,BorderLayout.NORTH);
         skye = new Marshall(100,50,50);
         c.add(skye,BorderLayout.CENTER);
-    }
+        l.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        l.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                c.remove(skye);
+                skye.transformacion(list[l.getSelectedIndex()]);
 
-    public void valueChanged(ListSelectionEvent event) {
+
+            }
+        });
+    }
+/*
+    public void actionPerformed(ActionEvent event){
         if (event.getSource() == t){
             skye.trasladar(5);
         }
@@ -44,5 +50,5 @@ public class MarshallT extends JApplet implements ListSelectionListener {
             skye.sesgar(0.5);
         }
         skye.mostrar();
-    }
+    }*/
 }

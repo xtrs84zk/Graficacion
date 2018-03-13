@@ -5,42 +5,42 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class SkyeT extends JApplet implements ActionListener {
-    JMenuItem t, r, e ,s;
-    private Skye skye;
-
+public class ChaseT extends JApplet implements ActionListener{
+    Chase skye;
+    JRadioButton t, r, e ,s;
     public void init(){
         this.setMinimumSize(new Dimension(900, 900));
         this.setMaximumSize(new Dimension(900, 900));
         this.setSize(500,500);
         Container c = getContentPane();
 
+        t = new JRadioButton("Trasladar");
         t.addActionListener( this);
-        t = new JMenuItem("Trasladar");
 
-        r = new JMenuItem("Rotar");
+        r = new JRadioButton("Rotar");
         r.addActionListener(this);
 
-        e = new JMenuItem("Escalar");
+        e = new JRadioButton("Escalar");
         e.addActionListener(this);
 
-        s = new JMenuItem("Sesgar");
+        s = new JRadioButton("Sesgar");
         s.addActionListener(this);
 
-        JMenuBar mb = new JMenuBar();
-        JMenu m1 = new JMenu("Menu");
-        m1.add(t);
-        m1.add(r);
-        m1.add(e);
-        m1.add(s);
-        mb.add(m1);
-        this.setJMenuBar(mb);
+        skye = new Chase(100,50,50);
+        ButtonGroup bg = new ButtonGroup();
+        bg.add(t);
+        bg.add(r);
+        bg.add(e);
+        bg.add(s);
         this.setVisible(true);
 
-        c.add(mb,BorderLayout.NORTH);
-        skye = new Skye(100,50,50);
-        c.add(skye,BorderLayout.CENTER);
+        this.add(t,BorderLayout.NORTH);
+        this.add(r,BorderLayout.EAST);
+        this.add(e,BorderLayout.SOUTH);
+        this.add(s,BorderLayout.WEST);
+        this.add(skye,BorderLayout.CENTER);
     }
+
     public void actionPerformed(ActionEvent event){
         if (event.getSource() == t){
             skye.trasladar(5);
