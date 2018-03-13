@@ -2,12 +2,16 @@ package Unidad_1_y_2.paws;
 
 import javax.swing.*;
 import java.applet.Applet;
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
+import java.awt.*;
 import java.awt.geom.GeneralPath;
 
 public class EverestPP extends JApplet {
+    public void init(){
+        //initialize drawing colors
+        this.setMinimumSize(new Dimension(500, 500));
+        this.setMaximumSize(new Dimension(500, 500));
+        this.setSize(500,500);
+    }
         public void paint(Graphics g) {
 
             super.paintComponents(g);

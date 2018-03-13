@@ -6,10 +6,12 @@ import javax.swing.*;
 
 public class Skye extends JApplet{
 
-    public void init() {
-
+    public void init(){
+        //initialize drawing colors
+        this.setMinimumSize(new Dimension(500, 500));
+        this.setMaximumSize(new Dimension(500, 500));
+        this.setSize(500,500);
     }
-
     public void paint(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
         QuadCurve2D shape = new QuadCurve2D.Double();
