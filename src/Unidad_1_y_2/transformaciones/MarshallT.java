@@ -28,10 +28,8 @@ public class MarshallT extends JApplet {
         l.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
-                c.remove(skye);
                 skye.transformacion(list[l.getSelectedIndex()]);
-
-
+                skye.mostrar();
             }
         });
     }

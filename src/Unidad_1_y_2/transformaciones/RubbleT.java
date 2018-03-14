@@ -4,34 +4,29 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JCheckBox;
 
-public class ChaseT extends JApplet implements ActionListener{
-    Chase skye;
-    JRadioButton t, r, e ,s;
+public class RubbleT extends JApplet implements ActionListener{
+    JCheckBox t,r,e,s;
+    RubblePP skye;
     public void init(){
         this.setMinimumSize(new Dimension(900, 900));
         this.setMaximumSize(new Dimension(900, 900));
         this.setSize(500,500);
 
-        t = new JRadioButton("Trasladar");
-        t.addActionListener( this);
+        t = new JCheckBox("Trasladar");
+        t.addActionListener(this);
 
-        r = new JRadioButton("Rotar");
+        r = new JCheckBox("Rotar");
         r.addActionListener(this);
 
-        e = new JRadioButton("Escalar");
+        e = new JCheckBox("Escalar");
         e.addActionListener(this);
 
-        s = new JRadioButton("Sesgar");
+        s = new JCheckBox("Sesgar");
         s.addActionListener(this);
 
-        skye = new Chase(100,50,50);
-        ButtonGroup bg = new ButtonGroup();
-        bg.add(t);
-        bg.add(r);
-        bg.add(e);
-        bg.add(s);
-        this.setVisible(true);
+        skye = new RubblePP(100,50,50);
 
         this.add(t,BorderLayout.NORTH);
         this.add(r,BorderLayout.EAST);
@@ -39,7 +34,6 @@ public class ChaseT extends JApplet implements ActionListener{
         this.add(s,BorderLayout.WEST);
         this.add(skye,BorderLayout.CENTER);
     }
-
     public void actionPerformed(ActionEvent event){
         if (event.getSource() == t){
             skye.trasladar(5);

@@ -2,21 +2,47 @@ package Unidad_1_y_2.transformaciones;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.geom.Ellipse2D;
-import java.awt.geom.GeneralPath;
-import java.awt.geom.QuadCurve2D;
-import java.awt.geom.RoundRectangle2D;
+import java.awt.geom.*;
 
-public class RubblePP extends JApplet {
+public class RubblePP extends JPanel {
     private static final long serialVersionUID = 1L;
+    AffineTransform at = new AffineTransform();
+    private int altoyancho;
+    private int xCoord, yCoord;
     public void init(){
         //initialize drawing colors
         this.setMinimumSize(new Dimension(500, 500));
         this.setMaximumSize(new Dimension(500, 500));
         this.setSize(500,500);
     }
+    public void mostrar(){
+        repaint();
+    }
+
+    public void  trasladar(int x){
+        at.translate(x,0);
+    }
+    public void rotar(int x){
+        at.rotate(Math.toRadians(x),180,180);
+    }
+
+    public void escalar(double x){
+        at.scale(x,x);
+    }
+
+    public void sesgar(double x){
+        at.shear(x,0.0);
+    }
+
+    public RubblePP(int aa, int xIncial, int yInicial){
+        altoyancho = aa;
+        xCoord = xIncial;
+        yCoord = yInicial;
+    }
     public void paint(Graphics g) {
+        super.paintComponent(g);
         Graphics2D rubble = (Graphics2D) g;
+        rubble.setTransform(at);
 
         GeneralPath triangulo = new GeneralPath();
         triangulo.moveTo(470, 361);

@@ -22,10 +22,15 @@ public class Marshall extends JPanel{
         xCoord = xIncial;
         yCoord = yInicial;
     }
+    public void mostrar(){
+        repaint();
+    }
     public void paint(Graphics g) {
+        super.paintComponent(g);
         //ojo izquierdo
-        g.drawOval(200,130,33,42);
         Graphics2D ojo = (Graphics2D) g;
+        ojo.setTransform(at);
+        g.drawOval(200,130,33,42);
         ojo.setColor(Color.cyan);
         ojo.fillOval(208,140,21,28);
         ojo.setColor(Color.black);
@@ -34,6 +39,7 @@ public class Marshall extends JPanel{
         g.fillOval(218,150,4,5);
         //ceja  izquierda
         Graphics2D ceja = (Graphics2D) g;
+        ceja.setTransform(at);
         ceja.setColor(Color.black);
         ceja.draw(new Line2D.Double(203,127,222,127));
         QuadCurve2D c1 = new QuadCurve2D.Double();
@@ -42,6 +48,7 @@ public class Marshall extends JPanel{
         ceja.fill(c1);
         //boca
         Graphics2D hocico = (Graphics2D) g;
+        hocico.setTransform(at);
         hocico.setColor(Color.RED);
         Polygon boca1 = new Polygon();
         boca1.addPoint(178,210);
@@ -114,6 +121,7 @@ public class Marshall extends JPanel{
         hocico.draw(h9);
         //nariz
         Graphics2D nariz = (Graphics2D) g;
+        nariz.setTransform(at);
         nariz.setPaint(Color.black);
         QuadCurve2D n1 = new QuadCurve2D.Double();
         n1.setCurve(173,196,184,182,184,175);
@@ -149,6 +157,7 @@ public class Marshall extends JPanel{
         nariz.fillPolygon(nariz2);
         //ojo derecho
         Graphics2D ojo2 = (Graphics2D) g;
+        ojo2.setTransform(at);
         ojo2.setColor(Color.black);
         QuadCurve2D o1 = new QuadCurve2D.Double();
         o1.setCurve(163,175,155,153,163,138);
@@ -167,6 +176,7 @@ public class Marshall extends JPanel{
         ojo2.fillOval(174,154,4,7);
         //ceja derecha
         Graphics2D ceja2 = (Graphics2D) g;
+        ceja2.setTransform(at);
         ceja2.setColor(Color.black);
         Polygon cejad = new Polygon();
         cejad.addPoint(160,138);
@@ -182,6 +192,7 @@ public class Marshall extends JPanel{
         ceja2.fillPolygon(cejad);
         //vicera
         Graphics2D casco = (Graphics2D) g;
+        casco.setTransform(at);
         Polygon vicera = new Polygon();
         casco.setColor(Color.red);
         vicera.addPoint(146,145);
@@ -426,6 +437,7 @@ public class Marshall extends JPanel{
         casco.setStroke(new BasicStroke(1.0f));
         //oreja izquierda
         Graphics2D orejaIzquierda = (Graphics2D) g;
+        orejaIzquierda.setTransform(at);
         QuadCurve2D oi1 = new QuadCurve2D.Double();
         oi1.setCurve(243,119,256,154,256,181);
         orejaIzquierda.draw(oi1);
@@ -456,6 +468,7 @@ public class Marshall extends JPanel{
         orejaIzquierda.fillOval(262,121,13,15);
         //oreja derecha
         Graphics2D orejaDerecha = (Graphics2D) g;
+        orejaDerecha.setTransform(at);
         QuadCurve2D od1 = new QuadCurve2D.Double();
         od1.setCurve(157,128,155,164,154,175);
         orejaDerecha.draw(od1);
@@ -482,6 +495,7 @@ public class Marshall extends JPanel{
         orejaDerecha.fillOval(148,160,5,10);
         //resto cara
         Graphics2D cara = (Graphics2D) g;
+        cara.setTransform(at);
         QuadCurve2D c14 = new QuadCurve2D.Double();
         c14.setCurve(152,192,165,212,171,222);
         cara.draw(c14);
@@ -504,6 +518,7 @@ public class Marshall extends JPanel{
         cara.fillOval(236,178,9,12);
         //chaleco
         Graphics2D cuerpo = (Graphics2D) g;
+        cuerpo.setTransform(at);
         cuerpo.setColor(Color.red);
         Polygon rojoChaleco = new Polygon();
         rojoChaleco.addPoint(191,272);
@@ -625,6 +640,7 @@ public class Marshall extends JPanel{
         cuerpo.draw(c316);
         //mochila
         Graphics2D mochila = (Graphics2D) g;
+        mochila.setTransform(at);
         mochila.setColor(Color.red);
         Polygon extintor = new Polygon();
         extintor.addPoint(290,282);
@@ -870,6 +886,7 @@ public class Marshall extends JPanel{
         cuerpo.fillOval(318,317,6,12);
         //collar
         Graphics2D collar = (Graphics2D) g;
+        collar.setTransform(at);
         collar.setStroke(new BasicStroke(1.0f));
         Polygon collarAmarillo = new Polygon();
         collar.setColor(Color.yellow);
@@ -1016,18 +1033,17 @@ public class Marshall extends JPanel{
 
     public void transformacion(String s) {
 
-            if(s ==("Trasladar")){
+        if(s ==("Trasladar")){
                 at.translate(5,0);
-            }
+        }
         if(s.equals("Rotar")) {
             at.rotate(Math.toRadians(5), 180, 180);
         }
         if(s.equals("Escalar")) {
-            at.scale(0.9, 5);
+            at.scale(0.9, 0.9);
         }
         if(s.equals("Sesgar")) {
             at.shear(0.5, 0.0);
         }
-        this.repaint();
     }
 }
