@@ -15,8 +15,8 @@ public class SkyeT extends JApplet implements ActionListener {
         this.setSize(500,500);
         Container c = getContentPane();
 
-        t.addActionListener( this);
         t = new JMenuItem("Trasladar");
+        t.addActionListener(this);
 
         r = new JMenuItem("Rotar");
         r.addActionListener(this);
