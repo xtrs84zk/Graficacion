@@ -10,6 +10,8 @@ public class Barco extends JPanel {
     private int altoyancho;
     private int xCoord, yCoord;
 
+    public Barco(){}
+
     public Barco(int aa, int xIncial, int yInicial){
         altoyancho = aa;
         xCoord = xIncial;
@@ -20,20 +22,19 @@ public class Barco extends JPanel {
         repaint();
     }
 
-    public void transformacion(String s) {
+    public void  trasladar(int x){
+        at.translate(x,0);
+    }
+    public void rotar(int x){
+        at.rotate(Math.toRadians(x),180,180);
+    }
 
-        if(s ==("Trasladar")){
-            at.translate(5,0);
-        }
-        if(s.equals("Rotar")) {
-            at.rotate(Math.toRadians(5), 180, 180);
-        }
-        if(s.equals("Escalar")) {
-            at.scale(0.9, 0.9);
-        }
-        if(s.equals("Sesgar")) {
-            at.shear(0.5, 0.0);
-        }
+    public void escalar(double x){
+        at.scale(x,x);
+    }
+
+    public void sesgar(double x){
+        at.shear(x,0.0);
     }
 
     public void paint(Graphics g) {
