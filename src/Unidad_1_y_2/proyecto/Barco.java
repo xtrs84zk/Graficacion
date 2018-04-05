@@ -41,7 +41,7 @@ public class Barco extends JPanel {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
         g2.setTransform(at);
-        g2.setColor(Color.cyan);
+        g2.setColor(Color.BLUE);
         g2.drawLine(50,243,91,243);
         g2.drawLine(50,243,50,249);
         g2.drawLine(91,243,84,249);

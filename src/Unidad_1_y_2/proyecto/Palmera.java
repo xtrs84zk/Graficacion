@@ -4,6 +4,35 @@ import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
 public class Palmera extends JApplet {
+	AffineTransform at = new AffineTransform();
+	private int altoyancho;
+	private int xCoord, yCoord;
+
+	public Palmera(){}
+
+	public Palmera(int aa, int xIncial, int yInicial){
+		altoyancho = aa;
+		xCoord = xIncial;
+		yCoord = yInicial;
+	}
+	public void  trasladar(int x){
+		at.translate(x,0);
+	}
+	public void rotar(int x){
+		at.rotate(Math.toRadians(x),180,180);
+	}
+
+	public void escalar(double x){
+		at.scale(x,x);
+	}
+
+	public void sesgar(double x){
+		at.shear(x,0.0);
+	}
+
+	public void mostrar(){
+		repaint();
+	}
 	public void paint(Graphics g){
 		Graphics2D g2=(Graphics2D)g;
 	   //tronco

@@ -1,20 +1,29 @@
 package Unidad_1_y_2.proyecto;
 
 import javax.swing.*;
+import javax.swing.event.MouseInputListener;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.QuadCurve2D;
 
-public class Sol extends JApplet{
+public class Sol extends JPanel {
     AffineTransform at = new AffineTransform();
-    private int altoyancho;
-    private int xCoord, yCoord;
+//    private int altoyancho;
+//    private int xCoord, yCoord;
+JButton t, r, e ,s;
+    private Color color = Color.yellow;
 
-    public Sol(int aa, int xIncial, int yInicial){
-        altoyancho = aa;
-        xCoord = xIncial;
-        yCoord = yInicial;
+    public Sol(){
     }
+
+    //    public Sol(int aa, int xIncial, int yInicial){
+//        altoyancho = aa;
+//        xCoord = xIncial;
+//        yCoord = yInicial;
+//    }
 
     public void mostrar(){
         repaint();
@@ -23,6 +32,7 @@ public class Sol extends JApplet{
     public void  trasladar(int x){
         at.translate(x,0);
     }
+
     public void rotar(int x){
         at.rotate(Math.toRadians(x),180,180);
     }
@@ -35,12 +45,18 @@ public class Sol extends JApplet{
         at.shear(x,0.0);
     }
 
+    public void cambiarColor(Color color) {
+        this.color = color;
+    }
+
     public void paint(Graphics g){
+        super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
-        //g2.setTransform(at);
+        g2.setTransform(at);
         g2.setColor(Color.gray);
         g2.fillOval(67,71,78,74);
-        g2.setColor(Color.yellow);
+        //g2.setColor(Color.yellow);
+        g2.setColor(color);
         g2.fillOval(68,72,76,72);
         g2.setColor(Color.gray);
         g2.fillOval(96,109,6,6);
@@ -62,7 +78,8 @@ public class Sol extends JApplet{
         QuadCurve2D brazoIzquierdo2 = new QuadCurve2D.Double();
         brazoIzquierdo2.setCurve(51,140,38,136,29,124);
         g2.draw(brazoIzquierdo2);
-        g2.setColor(Color.yellow);
+        //g2.setColor(Color.yellow);
+        g2.setColor(color);
 //        g2.fillOval(151,92,11,6);
 //        g2.fillOval(144,84,11,6);
 //        g2.fillOval(135,74,11,6);
