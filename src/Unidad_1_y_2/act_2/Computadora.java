@@ -1,3 +1,5 @@
+package Unidad_1_y_2.act_2;
+
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
