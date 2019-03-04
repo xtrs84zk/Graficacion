@@ -1,10 +1,9 @@
-package Unidad_1_y_2.actividades;
+package Unidad_1_y_2.act_2;
 
-import java.awt.FlowLayout;
-import javax.swing.JCheckBox;
-import javax.swing.JFrame;
+import javax.swing.*;
+import java.awt.*;
 
-public class a6
+public class CheckBox
 {
     public static void main(String[] args)
     {

@@ -1,10 +1,9 @@
-package Unidad_1_y_2.actividades;
+package Unidad_1_y_2.act_2;
 
-import java.awt.FlowLayout;
-import javax.swing.JFrame;
-import javax.swing.JPasswordField;
+import javax.swing.*;
+import java.awt.*;
 
-public class a15
+public class PasswordTest
 {
     public static void main(String[] args)
     {
@@ -12,7 +11,7 @@ public class a15
         f.setTitle("JPasswordFieldTest");
         f.setSize(200,150);
         f.getContentPane().setLayout(new FlowLayout());
-        JPasswordField pf = new JPasswordField("chemi");
+        JPasswordField pf = new JPasswordField("psw");
         f.getContentPane().add(pf);
         f.setVisible(true);
     }

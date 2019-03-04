@@ -1,9 +1,8 @@
-package Unidad_1_y_2.actividades;
+package Unidad_1_y_2.act_2;
 
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
+import javax.swing.*;
 
-public class a19
+public class FileChooser
 {
     public static void main(String[] args)
     {

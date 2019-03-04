@@ -1,9 +1,9 @@
-package Unidad_1_y_2.actividades;
+package Unidad_1_y_2.act_2;
 
-import java.awt.FlowLayout;
 import javax.swing.*;
+import java.awt.*;
 
-public class a10
+public class Label
 {
     public static void main(String[] args)
     {

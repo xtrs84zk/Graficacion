@@ -1,13 +1,15 @@
-package Unidad_1_y_2.actividades;
+package Unidad_1_y_2.act_2;
 
-import java.awt.FlowLayout;
 import javax.swing.*;
+import java.awt.*;
 
-public class a22
+public class TableView
 {
     public static void main(String[] args)
     {
-        JFrame f = new JFrame(); f.setTitle("JTableTest"); f.setSize(200,150);
+        JFrame f = new JFrame();
+        f.setTitle("Table test");
+        f.setSize(500, 150);
         f.getContentPane().setLayout(new FlowLayout()); Object[][] datos =
             {
                     { "Nombre1", "Apellido1", new Integer(911234567) },
@@ -15,7 +17,10 @@ public class a22
                     { "Nombre3", "Apellido3", new Integer(912494735) },
                     { "Nombre4", "Apellido4", new Integer(912387448) },
             };
-        String[] columnas = {"Nombre", "Apellidos", "Tfno"}; JTable t = new JTable(datos, columnas); JScrollPane sp= new JScrollPane(t); f.getContentPane().add(sp);
+        String[] columnas = {"First Name", "Last Name", "Phone"};
+        JTable t = new JTable(datos, columnas);
+        JScrollPane sp = new JScrollPane(t);
+        f.getContentPane().add(sp);
         f.setVisible(true);
     }
 }

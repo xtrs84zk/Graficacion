@@ -1,10 +1,10 @@
-package Unidad_1_y_2.actividades;
+package Unidad_1_y_2.act_2;
 
-import java.awt.FlowLayout;
 import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
+import java.awt.*;
 
-public class a23
+public class TreeView
 {
     public static void main(String[] args)
     {

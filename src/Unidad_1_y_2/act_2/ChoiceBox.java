@@ -1,10 +1,9 @@
-package Unidad_1_y_2.actividades;
+package Unidad_1_y_2.act_2;
 
-import java.awt.FlowLayout;
-import javax.swing.JComboBox;
-import javax.swing.JFrame;
+import javax.swing.*;
+import java.awt.*;
 
-public class a9
+public class ChoiceBox
 {
     public static void main(String[] args)
     {
