@@ -31,7 +31,13 @@ public class Texturas extends Application {
 
     @Override public void start(Stage stage) {
 
-        Image image_diffuse = new Image(getClass().getResource("f1.jpg").toExternalForm());
+        Image image_diffuse = null;
+
+        try {
+            image_diffuse = new Image(getClass().getResource("f1.jpg").toExternalForm());
+        } catch (Exception k){
+            k.printStackTrace();
+        }
         //Image image_normal = new Image(getClass().getResource("f1.jpg").toExternalForm());
 
         PhongMaterial mat = new PhongMaterial();
@@ -68,6 +74,10 @@ public class Texturas extends Application {
         stage.show();
     }
     public static void main(String[] args) {
-        launch(args);
+        try {
+            launch(args);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }
