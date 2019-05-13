@@ -50,7 +50,7 @@ public class Practica1 extends Application {
         // crear una camara en perspectiva
         PerspectiveCamera camera = new PerspectiveCamera();
         camera.setTranslateX(scene.getWidth() / -2.0);
-        camera.setTranslateY((scene.getHeight() / -2.0)- 150);
+        camera.setTranslateY(100);//(scene.getHeight() / -2.0)- 150);
 
         scene.setCamera(camera);
         stage.setTitle("JavaFX Graficos 3D");

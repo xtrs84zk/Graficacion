@@ -15,8 +15,11 @@ public class Practica2 extends Application{
         Box cubo1 = new Box(100, 100, 100);
         Box cubo2 = new Box(100, 100, 100);
 
+        cubo2.setTranslateX(-150);
+
         //Creando un haz de luz
         PointLight light = new PointLight();
+        light.setColor(Color.WHITE);
 
         //Creando un material
         final PhongMaterial redMaterial = new PhongMaterial();
@@ -33,10 +36,17 @@ public class Practica2 extends Application{
 
         cubo1.setDrawMode(DrawMode.FILL);
         cubo1.setCullFace(CullFace.FRONT);
+        cubo1.setRotate(80);
         cubo1.setMaterial(blueMaterial);
 
+        cubo2.setDrawMode(DrawMode.FILL);
+        cubo2.setCullFace(CullFace.FRONT);
+        //cubo2.setRotationAxis();
+        cubo2.setRotate(40);
+        cubo2.setMaterial(blueMaterial);
+
         //Creando el grupo
-        Group root = new Group(cubo1, light);
+        Group root = new Group(cubo1, cubo2, light);
 
         // crear la escena, true para activar el buffer de profindidad
         Scene scene = new Scene(root, 1280, 768, true,
