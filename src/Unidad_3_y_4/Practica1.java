@@ -7,6 +7,8 @@ package Unidad_3_y_4;
  */
 
 import javafx.application.*;
+import javafx.scene.shape.Cylinder;
+import javafx.scene.shape.Sphere;
 import javafx.stage.*;
 import javafx.animation.*;
 import javafx.event.*;
@@ -20,12 +22,18 @@ import javafx.util.*;
  * @author Martha
  */
 
-public class FiguraSola extends Application {
+public class Practica1 extends Application {
 
     @Override public void start(Stage stage) {
 
         // crear un cubo 3D, anchura, altura y profundidad
         Box box = new Box(100, 100, 100);
+        Sphere box2 = new Sphere(50);
+        Cylinder box3 = new Cylinder(50, 100);
+
+        box2.setTranslateX(250);
+        box3.setTranslateX(450);
+
 
         // crear una luz puntual
         PointLight light = new PointLight();
@@ -33,7 +41,7 @@ public class FiguraSola extends Application {
         light.setTranslateY(-180);
         light.setTranslateZ(-500);
 
-        Group root = new Group(box, light);
+        Group root = new Group(box, box2, box3, light);
 
         // crear la escena, true para activar el buffer de profindidad
         Scene scene = new Scene(root, 1280, 768, true,

@@ -36,7 +36,7 @@ public class EjemploFiguras2 extends Application {
         cubo.setTranslateZ(10);
         cubo.setRotate(35);
         cubo.setDrawMode(DrawMode.FILL);
-        cubo.setCullFace(CullFace.BACK);
+        cubo.setCullFace(CullFace.FRONT);
 
 
         PointLight pointLight = new PointLight(Color.ANTIQUEWHITE);

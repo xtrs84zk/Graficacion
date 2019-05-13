@@ -25,7 +25,7 @@ public class Fx3DShapeExample4 extends Application
     {
         // Create a Box
         Box box = new Box(100, 100, 100);
-        box.setCullFace(CullFace.NONE);
+        box.setCullFace(CullFace.FRONT);
         box.setTranslateX(250);
         box.setTranslateY(100);
         box.setTranslateZ(400);
@@ -42,12 +42,12 @@ public class Fx3DShapeExample4 extends Application
         rotation.setFromAngle(0);
         rotation.setToAngle(90);
         rotation.setAutoReverse(true);
-        rotation.setAxis(Rotate.X_AXIS);
+        rotation.setAxis(Rotate.Z_AXIS);
         rotation.play();
 
         // Create a red Light
         PointLight redLight = new PointLight();
-        redLight.setColor(Color.RED);
+        redLight.setColor(Color.rgb(255,128,4));
         redLight.setTranslateX(250);
         redLight.setTranslateY(-100);
         redLight.setTranslateZ(250);

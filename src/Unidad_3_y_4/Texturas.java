@@ -56,7 +56,7 @@ public class Texturas extends Application {
         // crear un cubo 3D, anchura, altura y profundidad
         Box cubo = new Box(300, 300, 400);
         cubo.setTranslateX(300);
-        cubo.setTranslateY(300);
+        cubo.setTranslateY(200);
         cubo.setTranslateZ(0);
         cubo.setRotate(80);
         cubo.setDrawMode(DrawMode.FILL);
