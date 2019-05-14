@@ -1,24 +1,15 @@
 package Unidad_3_y_4;
 
-import javafx.animation.Interpolator;
-import javafx.animation.RotateTransition;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Group;
-import javafx.scene.Node;
 import javafx.scene.PerspectiveCamera;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.image.Image;
-import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.Sphere;
-import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 
 public class Practica4 extends Application {
 
@@ -52,7 +43,7 @@ public class Practica4 extends Application {
         Image normalMap = new Image(this.getClass().getResourceAsStream("planisferio.jpg"));
         mat.setDiffuseMap(diffuseMap);
 
-        //Fucking lots of stars
+        //Lots of fucking stars
         Image img = new Image(this.getClass().getResourceAsStream("background.jpg"));
         ImagePattern pattern = new ImagePattern(img);
 
