@@ -115,9 +115,15 @@ public class Proyecto extends Application {
                 , spherAbeja6, spherAbeja7);
         root2.setTranslateX(950);
         root2.setTranslateY(-200);
-        root2.setScaleX(0.6);
-        root2.setScaleY(0.6);
-        root2.setScaleZ(0.6);
+        root2.setScaleX(0.4);
+        root2.setScaleY(0.4);
+        root2.setScaleZ(0.4);
+
+        TranslateTransition rotation7 = new TranslateTransition(Duration.seconds(0.2), root2);
+        rotation7.setCycleCount(Animation.INDEFINITE);
+        rotation7.setByX(-900f);
+        rotation7.setAutoReverse(true);
+        rotation7.play();
 
         //casa
         Image imageDiffuse1 = new Image(getClass().getResource("techo.jpeg").toExternalForm());
@@ -127,7 +133,7 @@ public class Proyecto extends Application {
         mat1.setSpecularPower(64);
         mat1.setDiffuseMap(imageDiffuse1);
 
-        Image imageDiffuse2 = new Image(getClass().getResource("2.jpg").toExternalForm());
+        Image imageDiffuse2 = new Image(getClass().getResource("puerta.jpg").toExternalForm());
         PhongMaterial mat2 = new PhongMaterial();
         Color colorLuz2 = null;
         mat2.setSpecularColor(colorLuz2);
@@ -157,7 +163,7 @@ public class Proyecto extends Application {
         techo.setCullFace(CullFace.BACK);
         techo.setMaterial(mat1);
 
-        Box puerta = new Box(114, 171, 270);
+        Box puerta = new Box(114, 171, 27);
         puerta.setTranslateX(900);
         puerta.setTranslateY(450);
         puerta.setTranslateZ(150);
@@ -165,7 +171,7 @@ public class Proyecto extends Application {
         puerta.setCullFace(CullFace.BACK);
         puerta.setMaterial(mat2);
 
-        Box ventana = new Box(114, 70, 285);
+        Box ventana = new Box(114, 70, 28);
         ventana.setTranslateX(730);
         ventana.setTranslateY(420);
         ventana.setTranslateZ(150);
@@ -179,8 +185,8 @@ public class Proyecto extends Application {
         casa.setTranslateZ(200);
         casa.setDrawMode(DrawMode.FILL);
         casa.setCullFace(CullFace.BACK);
-        casa.setMaterial(mat4);
 
+        casa.setMaterial(mat4);
         TranslateTransition rotation2 = new TranslateTransition(Duration.seconds(2), casa);
         rotation2.setCycleCount(Animation.INDEFINITE);
         rotation2.setByX(-1000f);
@@ -566,7 +572,7 @@ public class Proyecto extends Application {
         // ##############################################################
 
 
-        Group root = new Group(techo, puerta, ventana, casa, tierra, c, s1, s2, s3, s4, s5, v, p, m, lata,
+        Group root = new Group(techo, casa, ventana, puerta, tierra, c, s1, s2, s3, s4, s5, v, p, m, lata,
                 cubo1, cubo2, cubo3, cubo4, cubo5);
 
         //agregando abeja
