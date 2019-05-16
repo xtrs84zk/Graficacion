@@ -19,7 +19,7 @@ public class Proyecto extends Application {
 
     @Override
     public void start(Stage stage) {
-        //color luna
+        //color del sol
         PhongMaterial color = new PhongMaterial(Color.YELLOW);
         color.setSpecularPower(128);
 
@@ -33,15 +33,15 @@ public class Proyecto extends Application {
         ImagePattern pattern = new ImagePattern(img);
 
 
-        //tierra
-        Sphere tierra = new Sphere();
-        tierra.setRadius(50.0);
-        tierra.setTranslateX(150);
-        tierra.setTranslateY(100);
-        tierra.setMaterial(color);
+        //sol, i guess
+        Sphere sun = new Sphere();
+        sun.setRadius(50.0);
+        sun.setTranslateX(150);
+        sun.setTranslateY(100);
+        sun.setMaterial(color);
 
 
-        Group root = new Group(tierra);
+        Group root = new Group(sun);
 
         //Creating a scene object
         Scene scene = new Scene(root, 1280, 768);
@@ -66,5 +66,3 @@ public class Proyecto extends Application {
 
     }
 }
-// private RotateTransition rotateAroundYAxis(Node node) {
-//   RotateTransition rotat
