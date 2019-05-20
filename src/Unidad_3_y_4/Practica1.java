@@ -1,63 +1,44 @@
-package Unidad_3_y_4;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-import javafx.application.*;
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.shape.Box;
 import javafx.scene.shape.Cylinder;
 import javafx.scene.shape.Sphere;
-import javafx.stage.*;
-import javafx.animation.*;
-import javafx.event.*;
-import javafx.scene.*;
-import javafx.scene.effect.Lighting;
-import javafx.scene.layout.StackPane;
-import javafx.scene.shape.Box;
-import javafx.util.*;
-/**
- *
- * @author Martha
- */
-
+import javafx.stage.Stage;
 public class Practica1 extends Application {
 
-    @Override public void start(Stage stage) {
-
-        // crear un cubo 3D, anchura, altura y profundidad
-        Box box = new Box(100, 100, 100);
-        Sphere box2 = new Sphere(50);
-        Cylinder box3 = new Cylinder(50, 100);
-
-        box2.setTranslateX(250);
-        box3.setTranslateX(450);
-
-
-        // crear una luz puntual
-        PointLight light = new PointLight();
-        light.setTranslateX(-350);
-        light.setTranslateY(-180);
-        light.setTranslateZ(-500);
-
-        Group root = new Group(box, box2, box3, light);
-
-        // crear la escena, true para activar el buffer de profindidad
-        Scene scene = new Scene(root, 1280, 768, true,
-                SceneAntialiasing.BALANCED);
-
-        // crear una camara en perspectiva
-        PerspectiveCamera camera = new PerspectiveCamera();
-        camera.setTranslateX(scene.getWidth() / -2.0);
-        camera.setTranslateY(100);//(scene.getHeight() / -2.0)- 150);
-
-        scene.setCamera(camera);
-        stage.setTitle("JavaFX Graficos 3D");
-        stage.setScene(scene);
-        stage.show();
-    }
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
         launch(args);
     }
+
+    @Override
+    public void start(Stage primaryStage) {
+        //Circunferencia
+        Sphere sp = new Sphere(100);
+        sp.setTranslateX(120);
+        sp.setTranslateY(120);
+        sp.setTranslateZ(100);
+        //Cilindro
+        Cylinder cl = new Cylinder(30, 200, 100);
+        cl.setTranslateX(280);
+        cl.setTranslateY(120);
+        cl.setTranslateZ(100);
+        //cubo
+        Box box = new Box(200, 200, 300);
+        box.setTranslateX(500);
+        box.setTranslateY(120);
+        box.setTranslateZ(100);
+
+        Group root = new Group(sp, cl, box);
+
+        Scene scene = new Scene(root, 700, 250);
+
+        primaryStage.setTitle("Practica 1");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
 }
