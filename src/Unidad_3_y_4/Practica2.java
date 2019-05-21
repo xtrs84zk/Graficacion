@@ -1,3 +1,5 @@
+package Unidad_3_y_4;
+
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -38,7 +40,7 @@ public class Practica2 extends Application {
         cubo2.setTranslateY(120);
 
         //cubo3
-        Image image_diffuse = new Image(getClass().getResource("Starwars1.jpg").toExternalForm());
+        Image image_diffuse = new Image(getClass().getResource("2.jpg").toExternalForm());
         Color color_luz = null;
         PhongMaterial m3 = new PhongMaterial();
         m3.setSpecularColor(color_luz);
@@ -73,7 +75,7 @@ public class Practica2 extends Application {
         sp2.setTranslateY(350);
         //esfera3
 
-        Image image_diffuse2 = new Image(getClass().getResource("mlb.jpg").toExternalForm());
+        Image image_diffuse2 = new Image(getClass().getResource("f1.jpg").toExternalForm());
         Color colorLuz = null;
         PhongMaterial m6 = new PhongMaterial();
         m6.setSpecularColor(colorLuz);
@@ -105,7 +107,7 @@ public class Practica2 extends Application {
         c2.setTranslateY(580);
 
         //cilindro3
-        Image image_diffuse3 = new Image(getClass().getResource("redBull.jpg").toExternalForm());
+        Image image_diffuse3 = new Image(getClass().getResource("casa.jpeg").toExternalForm());
         Color colorluz = null;
         PhongMaterial m10 = new PhongMaterial();
         m10.setSpecularColor(colorluz);

@@ -1,6 +1,10 @@
+package Unidad_3_y_4;
+
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.Box;
 import javafx.scene.shape.Cylinder;
 import javafx.scene.shape.Sphere;
@@ -16,11 +20,14 @@ public class Practica1 extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        PhongMaterial color = new PhongMaterial(Color.RED);
+        color.setSpecularPower(128);
         //Circunferencia
-        Sphere sp = new Sphere(100);
+        Sphere sp = new Sphere(50);
         sp.setTranslateX(120);
         sp.setTranslateY(120);
         sp.setTranslateZ(100);
+        sp.setMaterial(color);
         //Cilindro
         Cylinder cl = new Cylinder(30, 200, 100);
         cl.setTranslateX(280);
