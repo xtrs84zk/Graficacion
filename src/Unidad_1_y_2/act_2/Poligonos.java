@@ -1,7 +1,6 @@
 package Unidad_1_y_2.act_2;
 
 import javafx.application.Application;
-import static javafx.application.Application.launch;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
@@ -10,6 +9,13 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class Poligonos extends Application {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) {
@@ -44,12 +50,5 @@ public class Poligonos extends Application {
         gc.closePath();
         gc.fill();
         gc.stroke();
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
     }
 }

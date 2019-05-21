@@ -14,16 +14,13 @@ import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-public class Fx3DShapeExample6 extends Application
-{
-    public static void main(String[] args)
-    {
+public class Fx3DShapeExample6 extends Application {
+    public static void main(String[] args) {
         Application.launch(args);
     }
 
     @Override
-    public void start(Stage stage)
-    {
+    public void start(Stage stage) {
         // Create a MeshView
         MeshView meshView = this.createMeshView();
         meshView.setTranslateX(250);
@@ -83,8 +80,7 @@ public class Fx3DShapeExample6 extends Application
         stage.show();
     }
 
-    public MeshView createMeshView()
-    {
+    private MeshView createMeshView() {
         float[] points =
                 {
                         50, 0, 0,

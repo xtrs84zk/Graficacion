@@ -1,4 +1,5 @@
 package Unidad_1_y_2.act_2;
+
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -9,6 +10,10 @@ import javafx.scene.shape.ArcType;
 import javafx.stage.Stage;
 
 public class Arcos extends Application {
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     public void start(Stage primaryStage) {
         Group root = new Group();
 
@@ -26,11 +31,8 @@ public class Arcos extends Application {
 
         primaryStage.show();
 
-        gc.strokeArc(50,50,100,100,40,40, ArcType.OPEN);
+        gc.strokeArc(50, 50, 100, 100, 40, 40, ArcType.OPEN);
         gc.setFill(Color.BROWN);
-        gc.fillArc(120,50,100,100,40,50, ArcType.OPEN);
-    }
-    public static void main (String[]args) {
-        launch(args);
+        gc.fillArc(120, 50, 100, 100, 40, 50, ArcType.OPEN);
     }
 }

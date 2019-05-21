@@ -148,5 +148,5 @@ public class Practica4 extends Application {
 
     }
 }
-   // private RotateTransition rotateAroundYAxis(Node node) {
-     //   RotateTransition rotat
+// private RotateTransition rotateAroundYAxis(Node node) {
+//   RotateTransition rotat

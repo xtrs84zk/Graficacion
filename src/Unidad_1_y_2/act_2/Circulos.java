@@ -1,4 +1,5 @@
 package Unidad_1_y_2.act_2;
+
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -8,6 +9,10 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class Circulos extends Application {
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     public void start(Stage primaryStage) {
         Group root = new Group();
 
@@ -25,12 +30,8 @@ public class Circulos extends Application {
 
         primaryStage.show();
 
-        gc.strokeOval(220,100,100,100);
+        gc.strokeOval(220, 100, 100, 100);
         gc.setFill(Color.BROWN);
-        gc.fillOval(100,100,100,100);
-    }
-
-    public static void main(String[] args) {
-        launch(args);
+        gc.fillOval(100, 100, 100, 100);
     }
 }

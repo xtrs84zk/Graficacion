@@ -10,16 +10,20 @@ import javafx.stage.Stage;
 
 
 public class linea extends Application {
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     public void start(Stage primaryStage) {
         Group root = new Group();
 
-        Canvas canvas = new Canvas(600,400);
+        Canvas canvas = new Canvas(600, 400);
 
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
         root.getChildren().add(canvas);
 
-        Scene scene = new Scene(root,600,400,Color.LIGHTGRAY);
+        Scene scene = new Scene(root, 600, 400, Color.LIGHTGRAY);
 
         primaryStage.setScene(scene);
 
@@ -32,10 +36,6 @@ public class linea extends Application {
         gc.setLineWidth(5);
 
         gc.strokeLine(0, 0, 100, 100);
-    }
-
-    public static void main (String[]args) {
-        launch(args);
     }
 }
 

@@ -9,6 +9,10 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class elipse extends Application {
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     public void start(Stage primaryStage) {
         Group root = new Group();
 
@@ -27,13 +31,9 @@ public class elipse extends Application {
         primaryStage.show();
 
 
-        gc.strokeOval(220,220,150,80);
+        gc.strokeOval(220, 220, 150, 80);
         gc.setFill(Color.BROWN);
-        gc.fillOval(100,100,150,80);
+        gc.fillOval(100, 100, 150, 80);
 
-    }
-
-    public static void main (String [] args){
-        launch(args);
     }
 }

@@ -3,10 +3,8 @@ package Unidad_1_y_2.act_2;
 import javax.swing.*;
 import java.awt.*;
 
-public class ToggleButton
-{
-    public static void main(String[] args)
-    {
+public class ToggleButton {
+    public static void main(String[] args) {
         JFrame f = new JFrame();
         f.setTitle("JToggleButtonTest");
         f.setSize(150, 70);

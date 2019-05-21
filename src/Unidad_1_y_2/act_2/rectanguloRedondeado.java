@@ -9,6 +9,10 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class rectanguloRedondeado extends Application {
+    public static void main(String[] args) {
+        launch((args));
+    }
+
     public void start(Stage primaryStage) {
         Group root = new Group();
 
@@ -27,14 +31,8 @@ public class rectanguloRedondeado extends Application {
         primaryStage.show();
 
 
-        gc.strokeRoundRect(80,40,100,200,95.0,9);
+        gc.strokeRoundRect(80, 40, 100, 200, 95.0, 9);
 
 
-
-
-    }
-
-    public static void main (String[] args){
-        launch((args));
     }
 }

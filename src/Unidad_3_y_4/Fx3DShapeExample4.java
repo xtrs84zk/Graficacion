@@ -1,4 +1,5 @@
 package Unidad_3_y_4;
+
 import javafx.animation.Animation;
 import javafx.animation.RotateTransition;
 import javafx.application.Application;
@@ -13,16 +14,13 @@ import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-public class Fx3DShapeExample4 extends Application
-{
-    public static void main(String[] args)
-    {
+public class Fx3DShapeExample4 extends Application {
+    public static void main(String[] args) {
         Application.launch(args);
     }
 
     @Override
-    public void start(Stage stage)
-    {
+    public void start(Stage stage) {
         // Create a Box
         Box box = new Box(100, 100, 100);
         box.setCullFace(CullFace.FRONT);
@@ -47,7 +45,7 @@ public class Fx3DShapeExample4 extends Application
 
         // Create a red Light
         PointLight redLight = new PointLight();
-        redLight.setColor(Color.rgb(255,128,4));
+        redLight.setColor(Color.rgb(255, 128, 4));
         redLight.setTranslateX(250);
         redLight.setTranslateY(-100);
         redLight.setTranslateZ(250);

@@ -6,36 +6,41 @@ package Unidad_3_y_4;
  * and open the template in the editor.
  */
 
-import javafx.application.*;
-import javafx.stage.*;
-import javafx.animation.*;
-import javafx.event.*;
-import javafx.scene.*;
-import javafx.scene.effect.Lighting;
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.SceneAntialiasing;
 import javafx.scene.image.Image;
-import javafx.scene.layout.StackPane;
-import javafx.scene.shape.Box;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.PhongMaterial;
+import javafx.scene.shape.Box;
 import javafx.scene.shape.CullFace;
 import javafx.scene.shape.DrawMode;
-import javafx.util.*;
+import javafx.stage.Stage;
 
 
 /**
- *
  * @author Martha
  */
 
 public class Texturas extends Application {
 
-    @Override public void start(Stage stage) {
+    public static void main(String[] args) {
+        try {
+            launch(args);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void start(Stage stage) {
 
         Image image_diffuse = null;
 
         try {
             image_diffuse = new Image(getClass().getResource("f1.jpg").toExternalForm());
-        } catch (Exception k){
+        } catch (Exception k) {
             k.printStackTrace();
         }
         //Image image_normal = new Image(getClass().getResource("f1.jpg").toExternalForm());
@@ -46,7 +51,6 @@ public class Texturas extends Application {
         mat.setSpecularPower(64);
         mat.setDiffuseMap(image_diffuse);
         //mat.setBumpMap(image_normal);
-
 
 
         //PhongMaterial mat = new PhongMaterial(Color.RED);
@@ -72,12 +76,5 @@ public class Texturas extends Application {
         stage.setTitle("JavaFX Graficos 3D");
         stage.setScene(scene);
         stage.show();
-    }
-    public static void main(String[] args) {
-        try {
-            launch(args);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
     }
 }

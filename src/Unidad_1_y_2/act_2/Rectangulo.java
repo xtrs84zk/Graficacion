@@ -10,12 +10,12 @@ import javafx.stage.Stage;
 
 public class Rectangulo extends Application {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         launch(args);
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         Group root = new Group();
         Canvas canvas = new Canvas(600, 600);
         GraphicsContext gc = canvas.getGraphicsContext2D();
@@ -25,8 +25,8 @@ public class Rectangulo extends Application {
         primaryStage.setTitle("Dibujo de rectángulo");
         primaryStage.show();
 
-        gc.strokeRect(10,100,150,100);
+        gc.strokeRect(10, 100, 150, 100);
         gc.setFill(Color.BROWN);
-        gc.fillRect(300,100,150,100);
+        gc.fillRect(300, 100, 150, 100);
     }
 }

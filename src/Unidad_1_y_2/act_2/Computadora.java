@@ -7,7 +7,11 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-public class Computadora extends linea{
+public class Computadora extends linea {
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     public void start(Stage primaryStage) {
         Group root = new Group();
         Canvas canvas = new Canvas(500, 500);
@@ -19,21 +23,17 @@ public class Computadora extends linea{
         primaryStage.show();
 
         gc.setFill(Color.YELLOW);
-        gc.fillRect(90,20,260,260);
-        gc.strokeRect(90,20,260,260);
+        gc.fillRect(90, 20, 260, 260);
+        gc.strokeRect(90, 20, 260, 260);
         gc.setFill(Color.LIGHTGRAY);
-        gc.fillRect(110,40,220,210);
-        gc.strokeRect(110,40,220,210);
+        gc.fillRect(110, 40, 220, 210);
+        gc.strokeRect(110, 40, 220, 210);
         gc.setFill(Color.YELLOW);
-        gc.fillRect(110,280,220,30);
-        gc.strokeRect(110,280,220,30);
+        gc.fillRect(110, 280, 220, 30);
+        gc.strokeRect(110, 280, 220, 30);
         gc.setFill(Color.YELLOW);
-        gc.fillRect(60,310,320,90);
-        gc.strokeRect(60,310,320,90);
-        gc.strokeRect(240,320,100,10);
-    }
-
-    public static void main (String[]args) {
-        launch(args);
+        gc.fillRect(60, 310, 320, 90);
+        gc.strokeRect(60, 310, 320, 90);
+        gc.strokeRect(240, 320, 100, 10);
     }
 }
